@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class FuelCosts{
-    public void main(String [] args){
+    public static void main(String [] args){
         Scanner in = new Scanner(System.in);
         boolean done = false;
         do {
@@ -12,9 +12,9 @@ public class FuelCosts{
             double priceOfGallon = in.nextDouble();
             double costToDrive100Miles = (100/fuelEfficiency)*priceOfGallon;
             double distanceWithFullTank = numberOfGallons * fuelEfficiency;
-            System.out.print("Cost to drive 100 miles: $%.2d%n"+ costToDrive100Miles);
-            System.out.print("Distance the car can go with a full tank :%.2f miles%n"+ distanceWithFullTank);
-
+            System.out.println("Cost to drive 100 miles: $"+ costToDrive100Miles);
+            System.out.println("Distance the car can go with a full tank :"+ distanceWithFullTank);
+            done = true;
         }while(!done);
     }
 }
